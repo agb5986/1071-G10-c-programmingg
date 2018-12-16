@@ -1,7 +1,5 @@
 #include<stdio.h>
 #include <stdlib.h>
-int main()
-{
 void prarr(int cr,int ht1,int ht2)
 {
     if(cr==1)
