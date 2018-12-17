@@ -422,7 +422,7 @@ int main()
 
         printf("是否結束遊戲?，否，則跳回主選單(Y/N)\n");
         getchar();
-         =toupper(getchar());
+        choose=toupper(getchar());
         }
     return 0;
 }
