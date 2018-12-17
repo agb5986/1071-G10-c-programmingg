@@ -187,14 +187,6 @@ void prarr(int cr,int ht1,int ht2)
 
         printf("\n");
 }
-void listh3(int ht1,int ht2,Mode mode)
-{
-            printf("力道:%d",mode.data.force);
-            printf("氣勁:%d",mode.data.gas);
-            printf("根骨:%d",mode.data.bone);
-            printf("洞察:%d",mode.data.insight);
-            printf("身法:%d",mode.data.body);
-}
 void cl(int ht1,int ht2,Data data)
 {
     if(ht1==1)
@@ -205,6 +197,23 @@ void cl(int ht1,int ht2,Data data)
         data.insight=data.insight+49;
         data.body=data.body+46;
     }
+    
+    if(ht2==1)
+    {
+        data.force=data.force+44;
+        data.gas=data.gas+69;
+        data.bone=data.bone+109;
+        data.insight=data.insight+49;
+        data.body=data.body+46;
+    }
+}
+void listh3(int ht1,int ht2,Mode mode)
+{
+            printf("力道:%03d",mode.data.force);
+            printf("氣勁:%03d",mode.data.gas);
+            printf("根骨:%03d",mode.data.bone);
+            printf("洞察:%03d",mode.data.insight);
+            printf("身法:%03d",mode.data.body);
 }
 void listh1(int ht1)
 {
@@ -406,6 +415,8 @@ int main()
             printf("\n==========腳色資料框==========\n");
             printf("]︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷[\n");
             prarr(cr,ht1,ht2);
+            printf("---------------------------\n");
+            listh3(ht1,ht2,mode);
             printf("\n]︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸[\n");
 
 
