@@ -1,16 +1,3 @@
-#include<stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-struct Data
-{
-    int force,gas,bone,insight,body;   //屬性值:力道，氣勁，根骨，洞察，身法。
-    int Ew,Iw,Ed,Id,blood;             //能力值:外功，內功，外防，內防，氣血。
-    int CP;                            //戰力
-};
-struct Mode
-{
-    Data data;
-};
 void prarr(int cr,int ht1,int ht2)
 {
     if(cr==1)
@@ -187,35 +174,6 @@ void prarr(int cr,int ht1,int ht2)
 
         printf("\n");
 }
-void cl(int ht1,int ht2,Data data)
-{
-    if(ht1==1)
-    {
-        data.force=data.force+44;
-        data.gas=data.gas+69;
-        data.bone=data.bone+109;
-        data.insight=data.insight+49;
-        data.body=data.body+46;
-    }
-
-    if(ht2==1)
-    {
-        data.force=data.force+44;
-        data.gas=data.gas+69;
-        data.bone=data.bone+109;
-        data.insight=data.insight+49;
-        data.body=data.body+46;
-    }
-}
-void listh3(int ht1,int ht2,Mode mode)
-{
-    cl(ht1,ht2,mode.data);
-            printf("力道:%03d\n",mode.data.force);
-            printf("氣勁:%03d\n",mode.data.gas);
-            printf("根骨:%03d\n",mode.data.bone);
-            printf("洞察:%03d\n",mode.data.insight);
-            printf("身法:%03d\n",mode.data.body);
-}
 void listh1(int ht1)
 {
     if(ht1==1)
@@ -368,13 +326,7 @@ void listh2(int ht2)
         printf("==================================\n");
     }
 }
-int main()
-{
-    Mode mode;
-    int cr=0,ht1=0,ht2=0;
-    char choose='Y';
-    while(choose=='Y')
-    {
+
         printf("=========================天涯八荒八大門派============================\n");
         printf("]︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷[\n");
         printf("|【**1.太白**】||【**2.神威**】||【**3.神刀**】||【**4.真武**】    |\n");
@@ -384,9 +336,6 @@ int main()
         printf("卍");
         scanf("%d",&cr);
 
-        char select='N';
-        while(select=='N')
-        {
             printf("\n");
             printf("=========================精通各路心法經脈============================\n");
             printf("]︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷[\n");
@@ -399,31 +348,4 @@ int main()
             printf("|【32.煉武根骨】【33.煉武洞察】【34.煉武身法】【35.刑天滄海】      |\n");
             printf("|【36.獵風沉舟】【37.嘯天鎮岳】【38.拜月冰心】                     |\n");
             printf("]︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸[\n");
-            printf("======>選擇心法\n");
-            printf("卍");
-            scanf("%d",&ht1);
-            listh1(ht1);
-            printf("卍");
-            scanf("%d",&ht2);
-            listh2(ht2);
-            printf("已選擇:【%d】 【%d】 心法，是否確定繼續計算，否，則跳回主選單?(Y/N)\n", ht1, ht2);
-            printf("卍");
-            getchar();
-            select =toupper(getchar());
-            printf("輸入戰力: ");
-        }
 
-            printf("\n==========腳色資料框==========\n");
-            printf("]︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷[\n");
-            prarr(cr,ht1,ht2);
-            printf("---------------------------\n");
-            listh3(ht1,ht2,mode);
-            printf("\n]︸︸︸︸︸︸︸︸︸︸︸︸︸︸︸[\n");
-
-
-        printf("是否結束遊戲?，否，則跳回主選單(Y/N)\n");
-        getchar();
-        select =toupper(getchar());
-        }
-    return 0;
-}
