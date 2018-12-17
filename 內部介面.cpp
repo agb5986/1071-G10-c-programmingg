@@ -209,11 +209,11 @@ void cl(int ht1,int ht2,Data data)
 }
 void listh3(int ht1,int ht2,Mode mode)
 {
-            printf("力道:%03d",mode.data.force);
-            printf("氣勁:%03d",mode.data.gas);
-            printf("根骨:%03d",mode.data.bone);
-            printf("洞察:%03d",mode.data.insight);
-            printf("身法:%03d",mode.data.body);
+            printf("力道:%d",mode.data.force);
+            printf("氣勁:%d",mode.data.gas);
+            printf("根骨:%d",mode.data.bone);
+            printf("洞察:%d",mode.data.insight);
+            printf("身法:%d",mode.data.body);
 }
 void listh1(int ht1)
 {
