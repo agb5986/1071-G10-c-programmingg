@@ -371,8 +371,8 @@ int main()
 {
     Mode mode;
     int cr=0,ht1=0,ht2=0;
-    char choose='Y';
-    while(choose=='Y')
+    char choose='N';
+    while(choose=='N')
     {
         printf("=========================天涯八荒八大門派============================\n");
         printf("]︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷︷[\n");
@@ -422,7 +422,7 @@ int main()
 
         printf("是否結束遊戲?，否，則跳回主選單(Y/N)\n");
         getchar();
-        select =toupper(getchar());
+         =toupper(getchar());
         }
     return 0;
 }
