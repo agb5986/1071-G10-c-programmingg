@@ -1,8 +1,6 @@
 #include<stdio.h>
 void ararr(int k,int c,int a[])
 {
-    int n[5]={44,151,26,45,78};
-    int m[5]={44,541,312,545,845};
 for(int i=0;i<5;i++)
     {
         a[0]=n[i];
