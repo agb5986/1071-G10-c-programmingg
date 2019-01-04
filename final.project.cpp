@@ -1,15 +1,6 @@
 #include<stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-struct Data
-{
-    int Ew,Iw,Ed,Id;             //能力值:外功，內功，外防，內防。
-    int CP;                            //戰力
-};
-struct Mode
-{
-    Data data;
-};
 void prarr(int cr,int ht1,int ht2)
 {
     if(cr==1)
@@ -1250,7 +1241,6 @@ void listh2(int ht2)
 }
 int main()
 {
-    Mode mode;
     int cr=0,ht1=0,ht2=0;
     char choose='N';
     while(cr<1 || cr>8)
