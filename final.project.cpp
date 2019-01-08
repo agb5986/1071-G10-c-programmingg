@@ -246,8 +246,8 @@ void list3(int ht1,int ht2,int cr)
     int k[5]= {1200,500,1000,500,3100};
     for(int i=0; i<5; i++)
     {
-        int increase=0;
-        int iplus=0;
+        int increase=0;//門派基礎戰鬥力:for迴圈外計算
+        int iplus=0;//門派基礎戰鬥力
         if(cr==1)
         {
             iplus=iplus+b[i];
@@ -288,7 +288,7 @@ void list3(int ht1,int ht2,int cr)
             iplus=iplus+k[i];
             increase=increase+k[4];
         }
-        int sum=0;
+        int sum=0;//第一本心法數值
 
         if(ht1==1)
         {
@@ -378,7 +378,7 @@ void list3(int ht1,int ht2,int cr)
         {
             sum=sum+p22[i];
         }
-        else if(ht1==23)
+        else if(ht1==23)+
         {
             sum=sum+p23[i];
         }
@@ -444,7 +444,7 @@ void list3(int ht1,int ht2,int cr)
         }
 
 
-        int add=0;
+        int add=0;//第二本心法數值
         if(ht2==1)
         {
             add=add+p1[i];
